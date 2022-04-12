@@ -14,12 +14,14 @@ class App extends Component{
     ]*/
   }
   componentDidMount(){
-    const url = 'https://www.kotsu.city.nagoya.jp/STATION_DATA/station_infos/diagrams/31175.json?_5438387'
+    const thisBus="\u71b1\u7530\u5de1\u56de";
+    const url = 'https://www.kotsu.city.nagoya.jp/STATION_DATA/station_infos/diagrams/11075.json?_5438387'
     fetch(url)
     .then((result) => result.json())
     .then((result) => {
-      this.setState({buses:result,})
+      this.setState({buses:result[thisBus],})
     })
+    .catch((error) => {console.error('Error: Cannot find ' + thisBus,error);})
   }
   handleSubmit = (member) => {
     this.setState({buses:[...this.state.buses,member]})
