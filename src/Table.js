@@ -23,7 +23,7 @@ const TableBody = (props) => {
     const rows = props.charData.map((d,idx) => {
         return(
             <tr key={idx}>
-                <td>{d.DIAGRAM["\u5e73\u65e5"]["12"]}</td>
+                <td>{d.DIAGRAM["\u5e73\u65e5"]["14"]}</td>
                 <td>{d.STATIONS}</td>
                 <td>{d.RAILWAY}</td>
                 <td>{d.POLENAME}</td>

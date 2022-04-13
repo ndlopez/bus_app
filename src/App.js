@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-//import './App.css';
+//import './App.css';//Bootstrap is used instead.
 import Table from './Table';
 import Form from './Form';
 
@@ -21,7 +21,9 @@ class App extends Component{
     .then((result) => {
       this.setState({buses:result[thisBus],})
     })
-    .catch((error) => {console.error('Error: Cannot find ' + thisBus,error);})
+    .catch((error) => {
+      //this.setState({buses:error});
+      console.error(`Error: Cannot find ${thisBus}`,error);})
   }
   handleSubmit = (member) => {
     this.setState({buses:[...this.state.buses,member]})
