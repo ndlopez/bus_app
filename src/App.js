@@ -20,14 +20,14 @@ class App extends Component{
     .then((result) => result.json())
     .then((result) => {
       this.setState({buses:result[thisBus],})
+    },(error) => {
+      console.error("Error: Could not load url",error);
     })
-    .catch((error) => {
-      //this.setState({buses:error});
-      console.error(`Error: Cannot find ${thisBus}`,error);})
   }
   handleSubmit = (member) => {
     this.setState({buses:[...this.state.buses,member]})
     //... is JS spread operator
+    console.log("Departure?",member.depart.value);
   }
   render(){
     const {buses} = this.state

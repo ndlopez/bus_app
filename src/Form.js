@@ -34,7 +34,7 @@ class Form extends Component{
                     value={departStation} onChange={this.handleChange} placeholder="Bus Stop Name"/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="depart" className="form-label">Arrival</label>
+                    <label htmlFor="arrival" className="form-label">Arrival</label>
                     <input type="text" className="form-control" name="arriveStation" id="arriveStation"
                     value={arriveStation} onChange={this.handleChange} placeholder="Bus Stop Name"/>
                 </div>

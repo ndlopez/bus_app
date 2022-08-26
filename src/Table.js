@@ -1,7 +1,10 @@
 import React from 'react';
 
+//const thisBus="\u71b1\u7530\u5de1\u56de";
+//del *.log from C:\Users\GA-HON071\AppData\Local\npm-cache\_logs
+
 const Table = (props) => {
-    const {charData, } = props
+    const {charData, } = props;
     return(
         <table className='table table-striped'>
             <TableHeader />
